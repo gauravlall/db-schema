@@ -213,6 +213,14 @@ insert into ns_opt_tag (tag_id, tag) values (1, 'InitialTag');
 --- adding dj_deployment flags 
 ALTER TABLE kloopzcm.dj_deployment ADD COLUMN flags integer DEFAULT 0 NOT NULL;
 
--- Used for provinding hints to recipe or work order execution (eg. propogate to).
+-- Used for providing hints to recipe or work order execution (eg. propogate to).
 ALTER TABLE kloopzcm.dj_rfc_ci ADD COLUMN hint TEXT;
+
+--Adding cache values for sequences.
+Alter sequence log_pk_seq cache 100;
+Alter sequence event_pk_seq cache 100;
+Alter sequence ns_pk_seq cache 50;
+Alter sequence md_pk_seq cache 20;
+
+
 
