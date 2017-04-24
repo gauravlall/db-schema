@@ -221,6 +221,3 @@ Alter sequence log_pk_seq cache 100;
 Alter sequence event_pk_seq cache 100;
 Alter sequence ns_pk_seq cache 50;
 Alter sequence md_pk_seq cache 20;
-
-
-
